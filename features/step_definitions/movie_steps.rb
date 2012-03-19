@@ -14,8 +14,9 @@ end
 
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   #  ensure that that e1 occurs before e2.
-  #  page.content  is the entire content of the page as a string.
-  assert false, "Unimplmemented"
+  # puts page.body
+  match = /#{e1}.*#{e2}/m =~ page.body
+  assert !match.nil?
 end
 
 Then /I should see all of the movies/ do
