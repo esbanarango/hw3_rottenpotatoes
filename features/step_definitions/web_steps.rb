@@ -108,6 +108,7 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
   else
     assert page.has_content?(text)
   end
+  
 end
 
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
